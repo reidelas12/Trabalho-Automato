@@ -16,4 +16,4 @@ F = ['q1']
 
 Sigma = ['0', '1']
 
-afd(Q, Sigma, delta, 'q0', F, '00101010100')
+afd(Q, Sigma, delta, 'q0', F, '0001')

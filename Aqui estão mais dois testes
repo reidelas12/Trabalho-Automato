@@ -1,0 +1,19 @@
+def afd(Q, Sigma, delta, q0, F, cadeia):
+    qA = q0
+    for s in cadeia:
+        qA = delta[(qA, s)]
+    return qA in F
+
+
+delta = {('q0', '0'): 'q0', ('q0', '1'): 'q1', ('q1', '0'): 'q2', ('q1', '1'): 'q1', ('q2', '0'): 'q1',
+         ('q2', '1'): "q1"}
+
+Q = ['q0', 'q1', 'q2']
+
+F = ['q1']
+
+Sigma = ['0', '1']
+
+afd(Q, Sigma, delta, 'q0', F, '00101010100')
+
+Neste exemolo é passado que exista no automato  um N° par de 0s  após o ultimo 1.
